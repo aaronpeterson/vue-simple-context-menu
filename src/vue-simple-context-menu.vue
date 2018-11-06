@@ -2,7 +2,7 @@
     <div>
 
         <ul :id="elementId" class="vue-simple-context-menu" v-click-outside="onClickOutside">
-            <li v-for="option in options" @click="optionClicked(option)" class="vue-simple-context-menu__item">
+            <li v-for="option in options" @click="optionClicked(option)" :key="option.name" class="vue-simple-context-menu__item">
                 {{option.name}}
             </li>
         </ul>
